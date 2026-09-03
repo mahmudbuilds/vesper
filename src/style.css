@@ -1,0 +1,279 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-[#19191D] selection:bg-[#497EE9]/25 selection:text-[#19191D] overflow-x-hidden;
+    background-color: #FFFFFF;
+  }
+}
+
+/* Luminous Sky Gradient for Hero */
+.cluely-hero-gradient {
+  background: radial-gradient(130% 95% at 50% 0%, #2071E5 0%, #3B86F2 28%, #66A8F9 52%, #A3C9FC 74%, #E2EDFD 92%, #FFFFFF 100%);
+}
+
+/* Cluely Word Rise Entrance Animation */
+@keyframes hero-word-rise {
+  0% {
+    transform: translateY(110%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-fade-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-hero-word-rise {
+  animation: hero-word-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-hero-fade-up {
+  animation: hero-fade-up 0.5s ease-out both;
+}
+
+/* Subtle Float for 3D Keycaps in Pre-Footer */
+@keyframes float-slow-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-2deg);
+  }
+}
+
+@keyframes float-slow-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(8deg);
+  }
+}
+
+.animate-float-1 {
+  animation: float-slow-1 5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-slow-2 6s ease-in-out infinite;
+}
+
+/* 3D Perspective Tilt */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.tilt-element {
+  transform-style: preserve-3d;
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1);
+  will-change: transform;
+}
+
+/* Card Styles matching exact Cluely */
+.card-styles {
+  background: radial-gradient(92.09% 126.39% at 50% 100%, #DDE2EE 58.91%, #BBC5DD 100%);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-styles:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.08), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Blue Card from Section 2 */
+.blue-listen-card {
+  background: radial-gradient(167.08% 140.48% at 79.5% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%), radial-gradient(120.74% 124.92% at 7.26% 100%, #497EE9 0%, #749CFF 100%);
+  background-blend-mode: overlay, normal;
+  box-shadow: 1.899px 1.77px 8.174px 0 rgba(255, 255, 255, 0.13) inset, 1.007px 0.939px 4.087px 0 rgba(255, 255, 255, 0.13) inset;
+  border-radius: 2rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blue-listen-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Gray Card from Section 2 */
+.gray-assist-card {
+  background: radial-gradient(92.09% 124.47% at 50% 99.24%, rgba(235, 240, 248, 0.85) 58.91%, rgba(215, 225, 242, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.04), inset 0 1.5px 2px rgba(255, 255, 255, 0.9);
+  border-radius: 2rem;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gray-assist-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Translucent Dark Overlay Window matching Cluely */
+.cluely-dark-hud {
+  background: linear-gradient(180deg, hsla(240, 8%, 12%, 0.9) 0%, hsla(240, 8%, 8%, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 1.15rem;
+}
+
+/* Top Floating Capsule Controller */
+.capsule-pill {
+  background: linear-gradient(180deg, #2E3039 0%, #22252C 100%);
+  box-shadow: 0 0 0 1px rgba(207, 226, 255, 0.25), 0 0.7px 0 0 #AFB3C4 inset, 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Cluely Buttons */
+.cluely-primary-btn {
+  background: linear-gradient(180deg, #2B73EB 0%, #175CD3 100%);
+  box-shadow: 0 0 0 1px rgba(147, 197, 253, 0.4), 0 4px 14px rgba(37, 99, 235, 0.3);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cluely-primary-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 0 1.5px rgba(191, 219, 254, 0.6), 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.cluely-black-btn {
+  background: linear-gradient(180deg, #2C2E36 0%, #15161A 100%);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2) inset, 0 12px 28px rgba(0, 0, 0, 0.25);
+  border-radius: 0.75rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cluely-black-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3) inset, 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+/* Subtle Gradient Text for Pre-Footer */
+.gradient-text-subtle {
+  background: linear-gradient(96.56deg, #667799 21.01%, #94A0B8 34.62%, #667799 47.64%, #667799 69.29%, #94A0B8 79.76%, #667799 90.35%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Accordion Smooth Height Transition */
+.accordion-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.accordion-wrapper.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.accordion-content {
+  overflow: hidden;
+}
+
+/* Custom Scrollbar */
+.cluely-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.cluely-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cluely-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* 10X SLIDING ANIMATION SYSTEM */
+.slide-up-init {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.slide-left-init {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.slide-right-init {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.slide-scale-init {
+  opacity: 0;
+  transform: translateY(50px) scale(0.92);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.slide-active {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Slide Stagger Delays */
+.delay-50 { transition-delay: 50ms !important; }
+.delay-100 { transition-delay: 100ms !important; }
+.delay-150 { transition-delay: 150ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-250 { transition-delay: 250ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+.delay-400 { transition-delay: 400ms !important; }
+.delay-500 { transition-delay: 500ms !important; }
+.delay-600 { transition-delay: 600ms !important; }
+
+/* Continuous Smooth Horizontal Marquee Slide */
+@keyframes slide-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: slide-marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Dynamic Slide on Hover */
+.slide-hover-right {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-hover-right:hover {
+  transform: translateX(6px);
+}
+
+.slide-hover-up {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-hover-up:hover {
+  transform: translateY(-5px);
+}
+
+
