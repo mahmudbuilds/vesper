@@ -365,5 +365,117 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
+/* World-Class Footer Animations */
+@keyframes beam-travel {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(1200%);
+  }
+}
+
+.animate-beam-travel {
+  animation: beam-travel 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes radar-ping {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  75%, 100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.animate-radar-ping {
+  animation: radar-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Audio / Telemetry Equalizer Bars */
+@keyframes bar-jump-1 {
+  0%, 100% { height: 4px; }
+  50% { height: 13px; }
+}
+
+@keyframes bar-jump-2 {
+  0%, 100% { height: 11px; }
+  50% { height: 5px; }
+}
+
+@keyframes bar-jump-3 {
+  0%, 100% { height: 7px; }
+  50% { height: 14px; }
+}
+
+.animate-bar-1 { animation: bar-jump-1 0.9s ease-in-out infinite; }
+.animate-bar-2 { animation: bar-jump-2 0.75s ease-in-out infinite 0.15s; }
+.animate-bar-3 { animation: bar-jump-3 1.1s ease-in-out infinite 0.3s; }
+
+/* Giant Watermark Ambient Glow */
+@keyframes watermark-glow {
+  0%, 100% {
+    letter-spacing: 0.05em;
+    opacity: 0.055;
+    transform: scale(1);
+  }
+  50% {
+    letter-spacing: 0.075em;
+    opacity: 0.095;
+    transform: scale(1.015);
+  }
+}
+
+.animate-watermark-glow {
+  animation: watermark-glow 9s ease-in-out infinite;
+}
+
+/* Animated Shimmer Badge */
+@keyframes badge-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-badge-shimmer {
+  background-size: 200% auto;
+  animation: badge-shimmer 3.5s linear infinite;
+}
+
+/* Floating Sparkle Particles */
+@keyframes float-sparkle {
+  0%, 100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.2) rotate(180deg);
+    opacity: 0.85;
+  }
+}
+
+.animate-float-sparkle {
+  animation: float-sparkle 4s ease-in-out infinite;
+}
+
+/* Floating Soft Background Orb */
+@keyframes float-orb {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(25px, -15px) scale(1.08);
+  }
+  66% {
+    transform: translate(-20px, 12px) scale(0.95);
+  }
+}
+
+.animate-float-orb {
+  animation: float-orb 12s ease-in-out infinite;
+}
+
+
 
 
