@@ -55,6 +55,16 @@ export const Navbar: React.FC = () => {
                 FAQ
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
               </a>
+              <a
+                href="https://github.com/mahmudbuilds/vesper"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition-colors relative group flex items-center gap-1.5 opacity-90 hover:opacity-100"
+              >
+                <span>GitHub</span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded-full bg-white/20 font-mono">★</span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full" />
+              </a>
             </nav>
           </div>
         </div>
