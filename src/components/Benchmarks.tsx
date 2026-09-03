@@ -1,29 +1,71 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { COMPATIBLE_PLATFORMS } from '../data/content';
+import { Layers } from 'lucide-react';
+
+const SUPPORTED_LANGUAGES = [
+  { name: 'Python 3.12 AST', color: 'bg-yellow-400' },
+  { name: 'C++ 20 / 23', color: 'bg-blue-600' },
+  { name: 'Go (Golang)', color: 'bg-cyan-400' },
+  { name: 'TypeScript / JS', color: 'bg-amber-400' },
+  { name: 'Rust 2024', color: 'bg-orange-600' },
+  { name: 'Java 21 LTS', color: 'bg-red-500' },
+  { name: 'C# / .NET 9', color: 'bg-purple-600' },
+  { name: 'PostgreSQL / SQL', color: 'bg-sky-600' },
+];
 
 export const Benchmarks: React.FC = () => {
-  // We duplicate the list to make the CSS infinite marquee loop seamless
-  const marqueeItems = [...COMPATIBLE_PLATFORMS, ...COMPATIBLE_PLATFORMS];
+  const marqueeItems = [...COMPATIBLE_PLATFORMS, ...COMPATIBLE_PLATFORMS, ...COMPATIBLE_PLATFORMS];
+  const languageItems = [...SUPPORTED_LANGUAGES, ...SUPPORTED_LANGUAGES, ...SUPPORTED_LANGUAGES];
 
   return (
     <section
       id="benchmarks"
-      className="py-16 max-w-6xl mx-auto px-4 text-center border-t border-gray-100 overflow-hidden"
+      className="py-20 max-w-6xl mx-auto px-4 text-center border-t border-gray-100 overflow-hidden"
     >
-      <span className="text-xs font-semibold tracking-widest text-[#8C929D] uppercase block mb-8">
-        Compatible with every interview & coding platform
-      </span>
-      {/* Dynamic Sliding Marquee */}
-      <div className="relative overflow-hidden w-full py-3 mask-gradient">
-        <div className="animate-marquee items-center gap-10 sm:gap-14">
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <span className="text-xs font-bold tracking-widest text-[#497EE9] uppercase inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 mb-3">
+          <Layers className="size-3 text-[#497EE9]" />
+          Universal Runtime Compatibility
+        </span>
+        <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-8">
+          Compatible with every interview platform & language
+        </h3>
+      </motion.div>
+
+      {/* Row 1: Platforms (Moving Left) */}
+      <div className="relative overflow-hidden w-full py-2">
+        <div className="animate-marquee items-center gap-4 sm:gap-6">
           {marqueeItems.map((platform, idx) => (
-            <div
+            <motion.div
+              whileHover={{ scale: 1.08, y: -2 }}
               key={`${platform.name}-${idx}`}
-              className="flex items-center gap-2 text-[#3D4150] font-medium text-sm px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 shadow-xs shrink-0"
+              className="flex items-center gap-2 text-[#3D4150] font-medium text-xs sm:text-sm px-4 py-2 rounded-xl bg-gray-50 hover:bg-white border border-gray-200/80 shadow-xs shrink-0 cursor-pointer transition-colors"
             >
-              <span className={`size-2.5 rounded-full ${platform.color}`}></span>
+              <span className={`size-2.5 rounded-full ${platform.color} shadow-xs`}></span>
               <span>{platform.name}</span>
-            </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Row 2: Languages & ASTs (Moving Right) */}
+      <div className="relative overflow-hidden w-full py-2 mt-2">
+        <div className="animate-marquee-reverse items-center gap-4 sm:gap-6">
+          {languageItems.map((lang, idx) => (
+            <motion.div
+              whileHover={{ scale: 1.08, y: -2 }}
+              key={`${lang.name}-${idx}`}
+              className="flex items-center gap-2 text-[#475569] font-mono text-xs px-3.5 py-1.5 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/70 shadow-xs shrink-0 cursor-pointer transition-colors"
+            >
+              <span className={`size-2 rounded-full ${lang.color}`}></span>
+              <span>{lang.name}</span>
+            </motion.div>
           ))}
         </div>
       </div>

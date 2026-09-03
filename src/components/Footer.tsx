@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { AppleLogo, WindowsLogo, VesperLogo } from './BrandIcons';
+import { Sparkles, ArrowRight, Zap } from 'lucide-react';
 
 export const Footer: React.FC = () => {
+  const [pressedKey, setPressedKey] = useState<string | null>(null);
+
   return (
     <>
       {/* PRE-FOOTER CTA SECTION */}
@@ -9,52 +13,95 @@ export const Footer: React.FC = () => {
         id="download"
         className="py-24 bg-gradient-to-b from-[#F5F8FD] via-[#EAEEF6] to-[#DDE2EE] relative overflow-hidden px-6 sm:px-12 border-t border-gray-100"
       >
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+        {/* Subtle Background Glow Orb */}
+        <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-96 h-96 bg-blue-300/20 rounded-full blur-3xl pointer-events-none" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10"
+        >
           {/* Left text & button */}
           <div className="max-w-xl text-left">
-            <h2 className="text-3xl sm:text-[38px] font-semibold text-gray-900 leading-[1.15] tracking-tight">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100/60 border border-blue-200">
+              <Sparkles className="size-3 text-blue-600" />
+              Instant Desktop Install
+            </span>
+            <h2 className="text-3xl sm:text-[38px] font-semibold text-gray-900 leading-[1.15] tracking-tight mt-2">
               Coding AI that helps during the interview, not after.
             </h2>
             <p className="mt-1.5 text-3xl sm:text-[38px] font-semibold leading-[1.15] tracking-tight gradient-text-subtle">
               Ace your next technical screen with Vesper.
             </p>
 
-            <div className="mt-8 flex items-center gap-3">
-              <a
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <motion.a
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.96 }}
                 href="#download"
-                className="cluely-black-btn text-white text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center gap-2.5 shadow-xl cursor-pointer smooth-hover"
+                className="cluely-black-btn text-white text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center gap-2.5 shadow-xl cursor-pointer"
               >
                 <AppleLogo className="size-4 shrink-0 fill-current" />
                 <span>Download for macOS</span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.04, y: -2 }}
+                whileTap={{ scale: 0.96 }}
                 href="#download"
-                className="bg-white/80 hover:bg-white text-gray-800 text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center gap-2.5 shadow-md border border-gray-200 cursor-pointer smooth-hover"
+                className="bg-white hover:bg-gray-50 text-gray-800 text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center gap-2.5 shadow-md border border-gray-200 cursor-pointer"
               >
                 <WindowsLogo className="size-4 shrink-0 fill-current" />
                 <span>Download for Windows</span>
-              </a>
+              </motion.a>
             </div>
           </div>
 
-          {/* Right: Real 3D Rendered Keycaps with Buttery Floating Animations */}
-          <div className="relative w-full max-w-sm h-64 flex items-center justify-center pointer-events-none">
-            <div className="animate-float-1 absolute left-4 size-32 sm:size-36 drop-shadow-2xl">
+          {/* Right: Real 3D Rendered Keycaps with Interactive Press */}
+          <div className="relative w-full max-w-sm h-64 flex items-center justify-center">
+            {/* Floating Shortcut Tooltip */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="absolute -top-3 z-30 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md border border-blue-200/80 text-blue-700 text-[11px] font-mono font-semibold shadow-lg flex items-center gap-1.5"
+            >
+              <Zap className="size-3 text-blue-600 animate-pulse" />
+              <span>⌘ + ↵ for instant synthesis</span>
+            </motion.div>
+
+            {/* Command Keycap */}
+            <motion.div
+              whileHover={{ scale: 1.06, rotate: -2 }}
+              whileTap={{ scale: 0.92, y: 6 }}
+              onClick={() => setPressedKey('cmd')}
+              className="animate-float-1 absolute left-4 size-32 sm:size-36 drop-shadow-2xl cursor-pointer select-none"
+              title="Click to press Command"
+            >
               <img
                 src="https://cluely.com/_next/static/media/command-btn.05a11379.png"
                 alt="Command Key"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain pointer-events-none"
               />
-            </div>
-            <div className="animate-float-2 absolute right-6 -top-2 size-36 sm:size-40 drop-shadow-2xl">
+            </motion.div>
+
+            {/* Return Keycap */}
+            <motion.div
+              whileHover={{ scale: 1.06, rotate: 4 }}
+              whileTap={{ scale: 0.92, y: 6 }}
+              onClick={() => setPressedKey('return')}
+              className="animate-float-2 absolute right-6 -top-2 size-36 sm:size-40 drop-shadow-2xl cursor-pointer select-none"
+              title="Click to press Return"
+            >
               <img
                 src="https://cluely.com/_next/static/media/return-active.30ff0cd8.png"
                 alt="Return Key"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain pointer-events-none"
               />
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* MAIN FOOTER */}

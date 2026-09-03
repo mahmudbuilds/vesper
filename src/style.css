@@ -249,14 +249,95 @@
   100% { transform: translateX(-50%); }
 }
 
+@keyframes slide-marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
 .animate-marquee {
   display: flex;
   width: max-content;
   animation: slide-marquee 28s linear infinite;
 }
 
-.animate-marquee:hover {
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: slide-marquee-reverse 32s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
   animation-play-state: paused;
+}
+
+/* Laser Scanner Beam */
+@keyframes laser-sweep {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-laser {
+  animation: laser-sweep 3s ease-in-out infinite;
+}
+
+/* Ambient Radial Pulse */
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.08) translate(10px, -8px);
+    opacity: 0.75;
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 7s ease-in-out infinite alternate;
+}
+
+/* Dynamic Shimmer Flow */
+@keyframes shimmer-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    transparent 100%
+  );
+  animation: shimmer-sweep 2.5s infinite;
 }
 
 /* Dynamic Slide on Hover */
@@ -275,5 +356,23 @@
 .slide-hover-up:hover {
   transform: translateY(-5px);
 }
+
+/* Smooth glass blur */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Tactile 3D Keycap Press Effect */
+.keycap-tactile {
+  transition: all 0.12s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.keycap-tactile:active {
+  transform: translateY(3px) scale(0.96);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
 
 
