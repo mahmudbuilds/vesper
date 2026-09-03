@@ -34,31 +34,31 @@ export const Hero: React.FC = () => {
 
         {/* Headline in EB Garamond with Smooth Word Rise Animation */}
         <h1 className="font-serif text-[56px] sm:text-[76px] lg:text-[88px] font-normal leading-[0.96] tracking-[-1px] text-white max-w-3xl mx-auto drop-shadow-sm">
-          <span className="inline-block overflow-hidden pb-1 align-bottom">
+          <span className="inline-block overflow-hidden pb-3 sm:pb-4 lg:pb-5 -mb-3 sm:-mb-4 lg:-mb-5 align-bottom">
             <span className="inline-block animate-hero-word-rise">#1</span>
           </span>{' '}
-          <span className="inline-block overflow-hidden pb-1 align-bottom">
+          <span className="inline-block overflow-hidden pb-3 sm:pb-4 lg:pb-5 -mb-3 sm:-mb-4 lg:-mb-5 align-bottom">
             <span className="inline-block animate-hero-word-rise" style={{ animationDelay: '0.1s' }}>
               Undetectable
             </span>
           </span>
           <br />
-          <span className="inline-block overflow-hidden pb-1 align-bottom">
+          <span className="inline-block overflow-hidden pb-3 sm:pb-4 lg:pb-5 -mb-3 sm:-mb-4 lg:-mb-5 align-bottom">
             <span className="inline-block animate-hero-word-rise" style={{ animationDelay: '0.2s' }}>
               AI
             </span>
           </span>{' '}
-          <span className="inline-block overflow-hidden pb-1 align-bottom">
+          <span className="inline-block overflow-hidden pb-3 sm:pb-4 lg:pb-5 -mb-3 sm:-mb-4 lg:-mb-5 align-bottom">
             <span className="inline-block animate-hero-word-rise" style={{ animationDelay: '0.3s' }}>
               for
             </span>
           </span>{' '}
-          <span className="inline-block overflow-hidden pb-1 align-bottom">
+          <span className="inline-block overflow-hidden pb-3 sm:pb-4 lg:pb-5 -mb-3 sm:-mb-4 lg:-mb-5 align-bottom">
             <span className="inline-block animate-hero-word-rise" style={{ animationDelay: '0.4s' }}>
               Live
             </span>
           </span>{' '}
-          <span className="inline-block overflow-hidden pb-1 align-bottom">
+          <span className="inline-block overflow-hidden pb-3 sm:pb-4 lg:pb-5 -mb-3 sm:-mb-4 lg:-mb-5 align-bottom">
             <span className="inline-block animate-hero-word-rise" style={{ animationDelay: '0.5s' }}>
               Coding
             </span>
