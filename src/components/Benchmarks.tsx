@@ -4,14 +4,14 @@ import { COMPATIBLE_PLATFORMS } from '../data/content';
 import { Layers } from 'lucide-react';
 
 const SUPPORTED_LANGUAGES = [
-  { name: 'Python 3.12 AST', color: 'bg-yellow-400' },
-  { name: 'C++ 20 / 23', color: 'bg-blue-600' },
-  { name: 'Go (Golang)', color: 'bg-cyan-400' },
-  { name: 'TypeScript / JS', color: 'bg-amber-400' },
-  { name: 'Rust 2024', color: 'bg-orange-600' },
-  { name: 'Java 21 LTS', color: 'bg-red-500' },
-  { name: 'C# / .NET 9', color: 'bg-purple-600' },
-  { name: 'PostgreSQL / SQL', color: 'bg-sky-600' },
+  { name: 'Python 3.14 AST', color: 'bg-yellow-400' },
+  { name: 'C++ 26', color: 'bg-blue-600' },
+  { name: 'Go 1.27', color: 'bg-cyan-400' },
+  { name: 'TypeScript 7.0', color: 'bg-amber-400' },
+  { name: 'Rust 1.98', color: 'bg-orange-600' },
+  { name: 'Java 26', color: 'bg-red-500' },
+  { name: 'C# 14 / .NET 10', color: 'bg-purple-600' },
+  { name: 'PostgreSQL 18', color: 'bg-sky-600' },
 ];
 
 export const Benchmarks: React.FC = () => {
