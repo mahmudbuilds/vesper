@@ -151,7 +151,7 @@ export const Footer: React.FC = () => {
                     <span>Follow on X</span>
                   </a>
                   <a
-                    href="https://github.com/mahmudbuilds/vesper"
+                    href="https://github.com/mahmudbuilds/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-white hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 text-gray-800 text-[11px] font-medium border border-gray-200 transition-all shadow-xs"

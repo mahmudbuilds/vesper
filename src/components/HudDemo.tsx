@@ -14,6 +14,7 @@ import {
   X,
   Minus,
   Maximize2,
+  ArrowUp,
 } from 'lucide-react';
 import { VesperLogo } from './BrandIcons';
 import { SCENARIOS, SCENARIO_CHIPS } from '../data/content';
@@ -393,15 +394,15 @@ export const HudDemo: React.FC = () => {
                       <span>AST Active</span>
                     </div>
                     <motion.button
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
+                      whileHover={{ scale: 1.08 }}
+                      whileTap={{ scale: 0.92 }}
                       id="hud-submit"
                       type="submit"
-                      className="size-6 rounded-full bg-blue-600 flex items-center justify-center text-white shrink-0 hover:bg-blue-500 transition-colors cursor-pointer shadow-md"
+                      aria-label="Send query"
+                      title="Send query"
+                      className="size-6 rounded-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 flex items-center justify-center text-white shrink-0 transition-all cursor-pointer shadow-md shadow-blue-500/30"
                     >
-                      <svg className="size-3 fill-current ml-0.5" viewBox="0 0 24 24">
-                        <path d="M2.5 1.5L10.5 6L2.5 10.5V1.5Z" />
-                      </svg>
+                      <ArrowUp className="size-3.5 stroke-[2.5]" />
                     </motion.button>
                   </form>
                 </motion.div>
