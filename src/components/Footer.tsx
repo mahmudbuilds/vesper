@@ -256,52 +256,7 @@ export const Footer: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Connect & Creator */}
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-3.5">Author & Source</h4>
-                <ul className="space-y-2.5 text-gray-600">
-                  <li>
-                    <a
-                      href="https://x.com/mahmudbuilds"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-blue-700 transition-colors flex items-center gap-1.5"
-                    >
-                      <span>X (@mahmudbuilds)</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/mahmudbuilds/vesper"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-blue-700 transition-colors"
-                    >
-                      GitHub Repository
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/mahmudbuilds"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-blue-700 transition-colors"
-                    >
-                      Mahmud on GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://vesper-one-brown.vercel.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-blue-700 transition-colors"
-                    >
-                      Live Demo Site
-                    </a>
-                  </li>
-                </ul>
-              </div>
+             
             </div>
           </div>
 
