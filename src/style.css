@@ -79,7 +79,6 @@
 
 .tilt-element {
   transform-style: preserve-3d;
-  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1);
   will-change: transform;
 }
 
@@ -103,11 +102,7 @@
   background-blend-mode: overlay, normal;
   box-shadow: 1.899px 1.77px 8.174px 0 rgba(255, 255, 255, 0.13) inset, 1.007px 0.939px 4.087px 0 rgba(255, 255, 255, 0.13) inset;
   border-radius: 2rem;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.blue-listen-card:hover {
-  transform: translateY(-3px);
+  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Gray Card from Section 2 */
@@ -116,11 +111,7 @@
   border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.04), inset 0 1.5px 2px rgba(255, 255, 255, 0.9);
   border-radius: 2rem;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.gray-assist-card:hover {
-  transform: translateY(-3px);
+  transition: box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Translucent Dark Overlay Window matching Cluely */
