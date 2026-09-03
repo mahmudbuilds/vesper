@@ -34,11 +34,13 @@ const AudioWaveVisualizer: React.FC = () => {
   }, []);
 
   return (
-    <div id="audio-bars-row" className="flex items-center justify-center gap-1.5 mt-8 px-4 h-12">
+    <div id="audio-bars-row" className="flex items-center justify-center gap-1 sm:gap-1.5 mt-6 sm:mt-8 px-2 sm:px-4 h-12 max-w-full overflow-hidden">
       {waveHeights.map((h, i) => (
         <div
           key={i}
-          className="w-1 sm:w-1.5 rounded-full bg-white/80 transition-all duration-75 shadow-xs"
+          className={`w-1 sm:w-1.5 rounded-full bg-white/80 transition-all duration-75 shadow-xs ${
+            i >= 22 ? 'hidden min-[480px]:block' : ''
+          }`}
           style={{
             height: `${h}%`,
             opacity: waveOpacities[i],
@@ -104,7 +106,7 @@ export const Features: React.FC = () => {
           whileHover={{ y: -5 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="blue-listen-card p-6 sm:p-8 md:p-9 text-white flex flex-col justify-between min-h-[460px] relative overflow-hidden shadow-2xl hover:shadow-blue-500/30 cursor-pointer transition-shadow"
+          className="blue-listen-card p-5 sm:p-8 md:p-9 text-white flex flex-col justify-between min-h-[440px] sm:min-h-[460px] relative overflow-hidden shadow-2xl hover:shadow-blue-500/30 cursor-pointer transition-shadow"
         >
           {/* Subtle animated light highlight */}
           <div className="absolute -top-24 -right-24 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
@@ -139,7 +141,7 @@ export const Features: React.FC = () => {
           </div>
 
           {/* Bottom Telemetry Bar */}
-          <div className="h-14 w-full rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10 flex items-center justify-between px-4 text-xs font-sans text-white/80">
+          <div className="h-14 w-full rounded-2xl bg-black/20 backdrop-blur-sm border border-white/10 flex items-center justify-between px-3 sm:px-4 text-[11px] sm:text-xs font-sans text-white/80">
             <span className="flex items-center gap-1.5">
               <Cpu className="size-3.5 text-indigo-300" />
               <span>Local Neural Synthesizer</span>
@@ -158,7 +160,7 @@ export const Features: React.FC = () => {
           whileHover={{ y: -5 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="gray-assist-card p-6 sm:p-8 md:p-9 text-[#19191D] flex flex-col justify-between min-h-[460px] relative overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer transition-shadow"
+          className="gray-assist-card p-5 sm:p-8 md:p-9 text-[#19191D] flex flex-col justify-between min-h-[440px] sm:min-h-[460px] relative overflow-hidden shadow-xl hover:shadow-2xl cursor-pointer transition-shadow"
         >
           <div>
             <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-[#19191D] leading-snug">
@@ -207,25 +209,25 @@ export const Features: React.FC = () => {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 8, scale: 0.98 }}
                 transition={{ duration: 0.2 }}
-                className="cluely-dark-hud p-4 text-white shadow-2xl rounded-2xl"
+                className="cluely-dark-hud p-3 sm:p-4 text-white shadow-2xl rounded-2xl"
               >
                 {/* Header with status badge & time complexity */}
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex flex-wrap items-center justify-between gap-1.5 mb-2">
                   <div className="flex items-center gap-1 text-[10px] text-emerald-400 font-mono">
-                    <Check className="size-3.5 text-emerald-400" />
-                    <span>
-                      {activeTab === 'optimal' && '100% Test Cases Passed (18/18)'}
+                    <Check className="size-3.5 text-emerald-400 shrink-0" />
+                    <span className="truncate max-w-[210px] sm:max-w-none">
+                      {activeTab === 'optimal' && '100% Tests Passed (18/18)'}
                       {activeTab === 'say' && 'Verbal Pitch Formulation'}
                       {activeTab === 'edge' && 'Critical Edge Case Guardrails'}
-                      {activeTab === 'system' && 'High-Scale Distributed Cache'}
+                      {activeTab === 'system' && 'Distributed High-Scale Cache'}
                     </span>
                   </div>
-                  <span className="px-2.5 py-0.5 rounded-md bg-blue-600 text-white text-[10px] font-semibold flex items-center gap-1">
+                  <span className="px-2 py-0.5 rounded-md bg-blue-600 text-white text-[9px] sm:text-[10px] font-semibold flex items-center gap-1 shrink-0">
                     <Zap className="size-2.5" />
                     {activeTab === 'optimal' && 'O(1) Time'}
-                    {activeTab === 'say' && 'Concise Speech'}
+                    {activeTab === 'say' && 'Speech'}
                     {activeTab === 'edge' && '4 Cases'}
-                    {activeTab === 'system' && 'Arch Scale'}
+                    {activeTab === 'system' && 'Scale'}
                   </span>
                 </div>
 
@@ -352,7 +354,7 @@ export const Features: React.FC = () => {
                     type="text"
                     value={customQuery}
                     onChange={(e) => setCustomQuery(e.target.value)}
-                    placeholder="Ask about time complexity or ⌘↵ for Instant Solution"
+                    placeholder="Ask about time complexity or ⌘↵..."
                     className="w-full bg-transparent px-1.5 text-[11px] text-white placeholder-zinc-500 outline-none font-sans"
                   />
                   <motion.button

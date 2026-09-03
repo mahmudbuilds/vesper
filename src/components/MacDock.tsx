@@ -304,7 +304,7 @@ export const MacDock: React.FC<MacDockProps> = ({ isBoxVisible, onToggleVesper }
       <motion.div
         onMouseMove={(e) => mouseX.set(e.clientX)}
         onMouseLeave={() => mouseX.set(Infinity)}
-        className="flex items-end gap-1 sm:gap-2 px-2 sm:px-3 pt-1.5 pb-0.5 sm:pb-1 rounded-[18px] sm:rounded-[22px] bg-white/[0.12] backdrop-blur-2xl border border-white/[0.22] shadow-[0_20px_40px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.4)] relative"
+        className="flex items-end gap-1 sm:gap-2 px-1.5 sm:px-3 pt-1.5 pb-0.5 sm:pb-1 rounded-[18px] sm:rounded-[22px] bg-white/[0.12] backdrop-blur-2xl border border-white/[0.22] shadow-[0_20px_40px_rgba(0,0,0,0.6),inset_0_1px_1px_rgba(255,255,255,0.4)] relative max-w-full overflow-x-auto cluely-scrollbar"
       >
         {/* Subtle glass reflection on the bottom edge */}
         <div className="absolute inset-x-4 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none" />

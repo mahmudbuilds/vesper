@@ -122,12 +122,12 @@ export const Footer: React.FC = () => {
             </p>
 
             {/* Platform Download Buttons */}
-            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+            <div className="mt-8 flex flex-col min-[460px]:flex-row flex-wrap items-stretch min-[460px]:items-center gap-3.5 w-full">
               <motion.a
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 href="#download"
-                className="cluely-black-btn text-white text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center gap-2.5 shadow-xl cursor-pointer group relative overflow-hidden"
+                className="cluely-black-btn text-white text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center justify-center gap-2.5 shadow-xl cursor-pointer group relative overflow-hidden w-full min-[460px]:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <AppleLogo className="size-4 shrink-0 fill-current group-hover:rotate-6 transition-transform duration-300" />
@@ -137,7 +137,7 @@ export const Footer: React.FC = () => {
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 href="#download"
-                className="bg-white hover:bg-gray-50 text-gray-800 text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center gap-2.5 shadow-md border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all cursor-pointer group relative overflow-hidden"
+                className="bg-white hover:bg-gray-50 text-gray-800 text-xs font-semibold px-5 py-3 rounded-xl inline-flex items-center justify-center gap-2.5 shadow-md border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all cursor-pointer group relative overflow-hidden w-full min-[460px]:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-50/50 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
                 <WindowsLogo className="size-4 shrink-0 fill-current group-hover:rotate-6 transition-transform duration-300" />
@@ -169,21 +169,21 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Right: Interactive 3D Keycaps with Real-time Feedback */}
-          <div className="relative w-full max-w-sm h-64 flex items-center justify-center">
+          <div className="relative w-full max-w-sm h-60 sm:h-64 flex items-center justify-center">
             {/* Floating Shortcut Pill with Live Pulse */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="absolute -top-4 z-30 px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-md border border-blue-200 text-blue-700 text-[11px] font-mono font-semibold shadow-md flex items-center gap-2 cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all"
+              className="absolute -top-4 z-30 px-2.5 sm:px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-md border border-blue-200 text-blue-700 text-[10px] sm:text-[11px] font-mono font-semibold shadow-md flex items-center gap-1.5 sm:gap-2 cursor-pointer hover:border-blue-400 hover:shadow-lg transition-all max-w-[calc(100vw-48px)]"
               onClick={() => {
                 setPressedKey('return');
                 triggerSynthesis();
               }}
             >
-              <Zap className="size-3.5 text-blue-600 animate-pulse" />
-              <span>⌘ + ↵ for instant synthesis</span>
-              <span className="size-1.5 rounded-full bg-blue-500 animate-ping" />
+              <Zap className="size-3.5 text-blue-600 animate-pulse shrink-0" />
+              <span className="truncate">⌘ + ↵ for instant synthesis</span>
+              <span className="size-1.5 rounded-full bg-blue-500 animate-ping shrink-0" />
             </motion.div>
 
             {/* Interactive Feedback Toast on Keypress/Click */}
@@ -216,7 +216,7 @@ export const Footer: React.FC = () => {
                 triggerSynthesis();
                 setTimeout(() => setPressedKey(null), 350);
               }}
-              className="animate-float-1 absolute left-4 size-32 sm:size-36 drop-shadow-2xl cursor-pointer select-none transition-transform"
+              className="animate-float-1 absolute left-2 min-[400px]:left-4 size-28 min-[400px]:size-32 sm:size-36 drop-shadow-2xl cursor-pointer select-none transition-transform"
               title="Click or press Command / Ctrl"
             >
               <div className="relative w-full h-full">
@@ -244,7 +244,7 @@ export const Footer: React.FC = () => {
                 triggerSynthesis();
                 setTimeout(() => setPressedKey(null), 350);
               }}
-              className="animate-float-2 absolute right-6 -top-2 size-36 sm:size-40 drop-shadow-2xl cursor-pointer select-none transition-transform"
+              className="animate-float-2 absolute right-2 min-[400px]:right-6 -top-2 size-32 min-[400px]:size-36 sm:size-40 drop-shadow-2xl cursor-pointer select-none transition-transform"
               title="Click or press Enter"
             >
               <div className="relative w-full h-full">
@@ -518,21 +518,21 @@ export const Footer: React.FC = () => {
           {/* Middle: Live Cluster Telemetry & Quick Back to Top */}
           <div className="pt-4 pb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-[#BBC5DD]/60">
             {/* Real-time Telemetry Status Pill */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/80 text-gray-700 text-xs font-medium border border-gray-200/90 shadow-xs backdrop-blur-xs hover:border-emerald-300 transition-colors group cursor-default">
-              <span className="relative flex size-2">
+            <div className="inline-flex flex-wrap items-center gap-2 sm:gap-2.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/80 text-gray-700 text-[11px] sm:text-xs font-medium border border-gray-200/90 shadow-xs backdrop-blur-xs hover:border-emerald-300 transition-colors group cursor-default max-w-full">
+              <span className="relative flex size-2 shrink-0">
                 <span className="animate-radar-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full size-2 bg-emerald-500"></span>
               </span>
 
               {/* Real-time audio/telemetry waveform equalizer bars */}
-              <div className="flex items-center gap-[2.5px] h-3 px-1">
+              <div className="flex items-center gap-[2.5px] h-3 px-1 shrink-0">
                 <span className="w-[2.5px] bg-emerald-500 rounded-full animate-bar-1" />
                 <span className="w-[2.5px] bg-emerald-500 rounded-full animate-bar-2" />
                 <span className="w-[2.5px] bg-emerald-500 rounded-full animate-bar-3" />
               </div>
 
               <span>Neural inference clusters operational</span>
-              <span className="text-gray-400">·</span>
+              <span className="hidden min-[400px]:inline text-gray-400">·</span>
               <span className="font-mono text-emerald-700 font-semibold">{latency}ms avg latency</span>
             </div>
 

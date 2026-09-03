@@ -23,7 +23,7 @@ export const Faq: React.FC = () => {
           <HelpCircle className="size-3 text-blue-600" />
           Frequently Asked Questions
         </span>
-        <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900 mt-2">
+        <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-gray-900 mt-2">
           Everything you need to know
         </h2>
       </motion.div>
@@ -44,13 +44,13 @@ export const Faq: React.FC = () => {
             >
               <button
                 onClick={() => toggleFaq(item.id)}
-                className="faq-question w-full flex items-center justify-between p-5 text-left font-medium text-base sm:text-lg text-gray-900 hover:text-blue-600 transition-colors cursor-pointer"
+                className="faq-question w-full flex items-center justify-between p-4 sm:p-5 text-left font-medium text-sm sm:text-base md:text-lg text-gray-900 hover:text-blue-600 transition-colors cursor-pointer gap-2"
               >
                 <span>{item.question}</span>
                 <motion.span
                   animate={{ rotate: isOpen ? 180 : 0 }}
                   transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-                  className="faq-chevron text-gray-400 shrink-0 ml-4 size-6 rounded-full bg-gray-100 flex items-center justify-center"
+                  className="faq-chevron text-gray-400 shrink-0 ml-2 sm:ml-4 size-6 rounded-full bg-gray-100 flex items-center justify-center"
                 >
                   <ChevronDown className="size-4" />
                 </motion.span>
@@ -65,7 +65,7 @@ export const Faq: React.FC = () => {
                     transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="px-5 pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-blue-100/60 pt-3">
+                    <div className="px-4 pb-4 sm:px-5 sm:pb-5 text-gray-600 text-xs sm:text-sm leading-relaxed border-t border-blue-100/60 pt-3">
                       {item.answer}
                     </div>
                   </motion.div>

@@ -33,21 +33,21 @@ export const Benchmarks: React.FC = () => {
           <Layers className="size-3 text-[#497EE9]" />
           Universal Runtime Compatibility
         </span>
-        <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-8">
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-6 sm:mb-8 px-2">
           Compatible with every interview platform & language
         </h3>
       </motion.div>
 
       {/* Row 1: Platforms (Moving Left) */}
       <div className="relative overflow-hidden w-full py-2">
-        <div className="animate-marquee items-center gap-4 sm:gap-6">
+        <div className="animate-marquee items-center gap-3 sm:gap-6">
           {marqueeItems.map((platform, idx) => (
             <motion.div
               whileHover={{ scale: 1.08, y: -2 }}
               key={`${platform.name}-${idx}`}
-              className="flex items-center gap-2 text-[#3D4150] font-medium text-xs sm:text-sm px-4 py-2 rounded-xl bg-gray-50 hover:bg-white border border-gray-200/80 shadow-xs shrink-0 cursor-pointer transition-colors"
+              className="flex items-center gap-1.5 sm:gap-2 text-[#3D4150] font-medium text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-gray-50 hover:bg-white border border-gray-200/80 shadow-xs shrink-0 cursor-pointer transition-colors"
             >
-              <span className={`size-2.5 rounded-full ${platform.color} shadow-xs`}></span>
+              <span className={`size-2 sm:size-2.5 rounded-full ${platform.color} shadow-xs`}></span>
               <span>{platform.name}</span>
             </motion.div>
           ))}
@@ -56,12 +56,12 @@ export const Benchmarks: React.FC = () => {
 
       {/* Row 2: Languages & ASTs (Moving Right) */}
       <div className="relative overflow-hidden w-full py-2 mt-2">
-        <div className="animate-marquee-reverse items-center gap-4 sm:gap-6">
+        <div className="animate-marquee-reverse items-center gap-3 sm:gap-6">
           {languageItems.map((lang, idx) => (
             <motion.div
               whileHover={{ scale: 1.08, y: -2 }}
               key={`${lang.name}-${idx}`}
-              className="flex items-center gap-2 text-[#475569] font-mono text-xs px-3.5 py-1.5 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/70 shadow-xs shrink-0 cursor-pointer transition-colors"
+              className="flex items-center gap-1.5 sm:gap-2 text-[#475569] font-mono text-[11px] sm:text-xs px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-xl bg-slate-50 hover:bg-white border border-slate-200/70 shadow-xs shrink-0 cursor-pointer transition-colors"
             >
               <span className={`size-2 rounded-full ${lang.color}`}></span>
               <span>{lang.name}</span>

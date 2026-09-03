@@ -96,7 +96,7 @@ export const Undetectability: React.FC = () => {
           <Lock className="size-3 text-emerald-600" />
           Kernel-Level Stealth Architecture
         </span>
-        <h2 className="text-4xl sm:text-6xl font-semibold tracking-tight text-[#19191D] mt-2">
+        <h2 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#19191D] mt-2">
           Undetectable in every way
         </h2>
         <p className="mt-3 text-base sm:text-lg text-gray-500 font-sans">
@@ -198,7 +198,7 @@ export const Undetectability: React.FC = () => {
               ref={sliderRef}
               onMouseDown={handleMouseDown}
               onTouchStart={handleTouchStart}
-              className="relative rounded-xl overflow-hidden h-56 bg-[#181A20] border border-gray-200 select-none cursor-ew-resize group"
+              className="relative rounded-xl overflow-hidden h-56 bg-[#181A20] border border-gray-200 select-none cursor-ew-resize group touch-none"
             >
               {/* Base View: Clean IDE (Visible to Interviewer) */}
               <div className="absolute inset-0 w-full h-full p-4 font-mono text-[10px] text-zinc-300 bg-[#16171D]">
@@ -288,22 +288,22 @@ export const Undetectability: React.FC = () => {
             </div>
 
             {/* View Presets Pill Selector */}
-            <div className="mt-3 flex items-center justify-center gap-1.5 p-1 rounded-xl bg-gray-100 text-[10px] font-medium">
+            <div className="mt-3 flex items-center justify-center gap-1 sm:gap-1.5 p-1 rounded-xl bg-gray-100 text-[9px] sm:text-[10px] font-medium">
               <button
                 onClick={() => setSliderPct(0)}
-                className={`flex-1 py-1 rounded-lg transition-all cursor-pointer ${sliderPct <= 10 ? 'bg-white shadow-xs font-semibold text-gray-900' : 'text-gray-500 hover:text-gray-800'}`}
+                className={`flex-1 py-1 px-1 rounded-lg transition-all cursor-pointer ${sliderPct <= 10 ? 'bg-white shadow-xs font-semibold text-gray-900' : 'text-gray-500 hover:text-gray-800'}`}
               >
                 Clean Screen
               </button>
               <button
                 onClick={() => setSliderPct(50)}
-                className={`flex-1 py-1 rounded-lg transition-all cursor-pointer ${sliderPct > 10 && sliderPct < 90 ? 'bg-white shadow-xs font-semibold text-gray-900' : 'text-gray-500 hover:text-gray-800'}`}
+                className={`flex-1 py-1 px-1 rounded-lg transition-all cursor-pointer ${sliderPct > 10 && sliderPct < 90 ? 'bg-white shadow-xs font-semibold text-gray-900' : 'text-gray-500 hover:text-gray-800'}`}
               >
                 Split View
               </button>
               <button
                 onClick={() => setSliderPct(100)}
-                className={`flex-1 py-1 rounded-lg transition-all cursor-pointer ${sliderPct >= 90 ? 'bg-white shadow-xs font-semibold text-gray-900' : 'text-gray-500 hover:text-gray-800'}`}
+                className={`flex-1 py-1 px-1 rounded-lg transition-all cursor-pointer ${sliderPct >= 90 ? 'bg-white shadow-xs font-semibold text-gray-900' : 'text-gray-500 hover:text-gray-800'}`}
               >
                 Vesper Screen
               </button>
@@ -348,18 +348,18 @@ export const Undetectability: React.FC = () => {
             </div>
 
             {/* Tactile Keyboard Controller Tray */}
-            <div className="mt-3 p-2 rounded-xl bg-[linear-gradient(180deg,#EEEFF1_30.83%,#E3E4E9_100%)] shadow-sm border border-gray-200 flex items-center justify-between">
-              <div className="relative flex h-8 px-3 items-center gap-1.5 rounded-md border border-gray-300 bg-white shadow-xs text-xs font-semibold text-gray-700">
+            <div className="mt-3 p-1.5 sm:p-2 rounded-xl bg-[linear-gradient(180deg,#EEEFF1_30.83%,#E3E4E9_100%)] shadow-sm border border-gray-200 flex flex-wrap sm:flex-nowrap items-center justify-between gap-1.5">
+              <div className="relative flex h-7 sm:h-8 px-2 sm:px-3 items-center gap-1 sm:gap-1.5 rounded-md border border-gray-300 bg-white shadow-xs text-xs font-semibold text-gray-700 shrink-0">
                 <Command className="size-3 text-gray-700" />
-                <span className="text-[10px]">arrow keys</span>
+                <span className="text-[9px] sm:text-[10px]">arrow keys</span>
               </div>
-              <span className="text-gray-400 font-bold text-xs">+</span>
-              <div className="flex items-center gap-1">
+              <span className="text-gray-400 font-bold text-xs hidden min-[360px]:inline">+</span>
+              <div className="flex items-center gap-1 shrink-0">
                 <motion.button
                   whileTap={{ scale: 0.88, y: 2 }}
                   id="move-up"
                   onClick={moveUp}
-                  className={`size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
+                  className={`size-7 sm:size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
                     activeKey === 'up' ? 'bg-blue-100 text-blue-600 border-blue-400 scale-95' : 'bg-white hover:bg-gray-50'
                   }`}
                   title="Move HUD Up"
@@ -370,7 +370,7 @@ export const Undetectability: React.FC = () => {
                   whileTap={{ scale: 0.88, y: 2 }}
                   id="move-down"
                   onClick={moveDown}
-                  className={`size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
+                  className={`size-7 sm:size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
                     activeKey === 'down' ? 'bg-blue-100 text-blue-600 border-blue-400 scale-95' : 'bg-white hover:bg-gray-50'
                   }`}
                   title="Move HUD Down"
@@ -381,7 +381,7 @@ export const Undetectability: React.FC = () => {
                   whileTap={{ scale: 0.88, y: 2 }}
                   id="move-left"
                   onClick={moveLeft}
-                  className={`size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
+                  className={`size-7 sm:size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
                     activeKey === 'left' ? 'bg-blue-100 text-blue-600 border-blue-400 scale-95' : 'bg-white hover:bg-gray-50'
                   }`}
                   title="Move HUD Left"
@@ -392,7 +392,7 @@ export const Undetectability: React.FC = () => {
                   whileTap={{ scale: 0.88, y: 2 }}
                   id="move-right"
                   onClick={moveRight}
-                  className={`size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
+                  className={`size-7 sm:size-8 flex items-center justify-center rounded-md border border-gray-300 shadow-xs text-xs font-bold text-gray-700 transition-all cursor-pointer keycap-tactile ${
                     activeKey === 'right' ? 'bg-blue-100 text-blue-600 border-blue-400 scale-95' : 'bg-white hover:bg-gray-50'
                   }`}
                   title="Move HUD Right"

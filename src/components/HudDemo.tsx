@@ -269,8 +269,8 @@ export const HudDemo: React.FC = () => {
             <div className="relative flex items-center justify-center">
               <motion.div
                 onClick={() => setIsNotchExpanded((prev) => !prev)}
-                className={`group cursor-pointer rounded-b-xl bg-black border-x border-b border-white/15 shadow-md flex items-center gap-2 px-3 py-0.5 transition-all ${
-                  isNotchExpanded ? 'bg-black/95 px-4 py-1.5' : 'hover:bg-zinc-900'
+                className={`group cursor-pointer rounded-b-xl bg-black border-x border-b border-white/15 shadow-md flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-0.5 transition-all ${
+                  isNotchExpanded ? 'bg-black/95 px-3 sm:px-4 py-1.5' : 'hover:bg-zinc-900'
                 }`}
               >
                 {/* Camera Lens with Specular Highlight */}
@@ -284,7 +284,7 @@ export const HudDemo: React.FC = () => {
                 {/* Vesper Status Pill inside Notch */}
                 <div className="flex items-center gap-1.5 text-[10px] text-zinc-300 font-mono">
                   <VesperLogo className="size-3 fill-blue-400" />
-                  <span className="hidden sm:inline font-sans text-white/90">
+                  <span className="hidden min-[480px]:inline font-sans text-white/90">
                     {isBoxVisible ? 'Compositor Live' : 'Stealth Active'}
                   </span>
                 </div>
@@ -298,7 +298,7 @@ export const HudDemo: React.FC = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -4, scale: 0.92 }}
                     transition={{ type: 'spring', stiffness: 400, damping: 25 }}
-                    className="absolute top-8 z-50 w-72 sm:w-80 rounded-2xl bg-black/90 backdrop-blur-2xl border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.7)] p-3 text-white"
+                    className="absolute top-8 z-50 w-72 sm:w-80 max-w-[calc(100vw-32px)] rounded-2xl bg-black/90 backdrop-blur-2xl border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.7)] p-3 text-white left-1/2 -translate-x-1/2"
                   >
                     <div className="flex items-center justify-between pb-2 border-b border-white/10">
                       <div className="flex items-center gap-2">
@@ -337,7 +337,7 @@ export const HudDemo: React.FC = () => {
             </div>
 
             {/* Right Status Tray */}
-            <div className="flex items-center gap-2 sm:gap-3 text-white/90 text-[10px] sm:text-[11px]">
+            <div className="flex items-center gap-1.5 sm:gap-3 text-white/90 text-[10px] sm:text-[11px]">
               {/* GPU Compositor Tag */}
               <div className="hidden sm:flex items-center gap-1 px-1.5 py-0.5 rounded bg-white/10 border border-white/15 text-emerald-400 font-mono text-[10px]">
                 <span className="size-1.5 rounded-full bg-emerald-400" />
@@ -544,7 +544,7 @@ export const HudDemo: React.FC = () => {
               </div>
 
               {/* Code Gutter & Editor Lines */}
-              <div className="flex-1 p-3 sm:p-4 overflow-y-auto cluely-scrollbar font-mono text-[11px] sm:text-xs leading-relaxed text-zinc-300 select-text">
+              <div className="flex-1 p-2.5 sm:p-4 overflow-y-auto overflow-x-auto cluely-scrollbar font-mono text-[11px] sm:text-xs leading-relaxed text-zinc-300 select-text">
                 {activeTab === 'solution' ? (
                   <div className="space-y-1">
                     <div>
@@ -649,7 +649,7 @@ export const HudDemo: React.FC = () => {
                     transition: { duration: 0.18, ease: [0.16, 1, 0.3, 1] },
                   }}
                   transition={{ type: 'spring', stiffness: 360, damping: 27 }}
-                  className="absolute inset-x-2 sm:inset-x-8 top-4 sm:top-8 mx-auto max-w-xl rounded-2xl bg-[#161720]/85 backdrop-blur-2xl border border-white/20 shadow-[0_30px_70px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.12),inset_0_1px_0_rgba(255,255,255,0.25)] p-3 sm:p-4 text-white z-30"
+                  className="absolute inset-x-1.5 sm:inset-x-8 top-3 sm:top-8 mx-auto max-w-xl rounded-2xl bg-[#161720]/90 backdrop-blur-2xl border border-white/20 shadow-[0_30px_70px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.12),inset_0_1px_0_rgba(255,255,255,0.25)] p-2.5 sm:p-4 text-white z-30"
                 >
                   {/* Window Header with HUD Traffic Lights & Status */}
                   <div className="flex items-center justify-between pb-2 mb-2 border-b border-white/10 text-[10px] text-zinc-400 font-sans">
@@ -675,7 +675,8 @@ export const HudDemo: React.FC = () => {
                       />
                       <span className="ml-1 text-white font-medium flex items-center gap-1">
                         <VesperLogo className="size-3 text-blue-400 fill-current" />
-                        <span>Vesper Intelligence</span>
+                        <span className="hidden min-[420px]:inline">Vesper Intelligence</span>
+                        <span className="min-[420px]:hidden">Vesper</span>
                         <span className="text-zinc-500 font-normal">v4.2</span>
                       </span>
                     </div>
@@ -704,7 +705,7 @@ export const HudDemo: React.FC = () => {
                   </div>
 
                   {/* Real-time Streaming AI Output with Complexity Badges */}
-                  <div className="p-3 bg-black/45 rounded-xl border border-white/10 min-h-[64px] max-h-28 overflow-y-auto cluely-scrollbar text-[11px] sm:text-xs text-zinc-100 font-sans leading-relaxed">
+                  <div className="p-2.5 sm:p-3 bg-black/45 rounded-xl border border-white/10 min-h-[64px] max-h-28 overflow-y-auto cluely-scrollbar text-[11px] sm:text-xs text-zinc-100 font-sans leading-relaxed">
                     <span>{displayedText}</span>
                     <span className="inline-block w-1.5 h-3.5 bg-blue-400 ml-1 animate-pulse align-middle" />
                   </div>
@@ -748,7 +749,7 @@ export const HudDemo: React.FC = () => {
                       type="text"
                       value={customInput}
                       onChange={(e) => setCustomInput(e.target.value)}
-                      placeholder="Ask about algorithm, complexity, or ⌘↵ for Instant Solution..."
+                      placeholder="Ask about algorithm, complexity, or ⌘↵..."
                       className="w-full bg-transparent px-1 text-[11px] font-sans text-white placeholder-zinc-500 outline-none"
                     />
                     <div className="hidden sm:flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-[10px] text-blue-300 shrink-0 font-mono">
