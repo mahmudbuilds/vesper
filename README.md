@@ -1,4 +1,4 @@
-# ?? Vesper � Undetectable AI Copilot Landing Page
+﻿# ⚡ Vesper — Undetectable AI Copilot Landing Page
 
 [![Live Demo](https://img.shields.io/badge/Demo-vesper--one--brown.vercel.app-2B73EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vesper-one-brown.vercel.app)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
@@ -10,11 +10,11 @@
 
 > A modern, high-craft landing page for **Vesper**, an undetectable AI copilot concept engineered for live technical interviews, algorithm optimization, and system design challenges.
 
-?? **Live Demo:** [vesper-one-brown.vercel.app](https://vesper-one-brown.vercel.app)
+🔗 **Live Demo:** [vesper-one-brown.vercel.app](https://vesper-one-brown.vercel.app)
 
 ---
 
-## ?? About The Project & Motivation
+## 💡 About The Project & Motivation
 
 This project was built as an intensive exercise in **practicing and mastering modern frontend engineering**. The goal was to elevate UI craftsmanship beyond static templates by creating a production-grade web experience featuring:
 
@@ -25,7 +25,7 @@ This project was built as an intensive exercise in **practicing and mastering mo
 
 ---
 
-## ?? Design Inspiration
+## 🎨 Design Inspiration
 
 The visual identity and art direction of this project were heavily inspired by the stunning aesthetic of **[Cluely](https://cluely.com)**.
 
@@ -36,7 +36,7 @@ Special appreciation goes to Cluely's clean execution:
 
 ---
 
-## ??? Tech Stack
+## 🛠️ Tech Stack
 
 | Technology | Role | Details |
 | :--- | :--- | :--- |
@@ -50,59 +50,59 @@ Special appreciation goes to Cluely's clean execution:
 
 ---
 
-## ? Key Features & Highlights
+## ✨ Key Features & Highlights
 
-### 1. ??? Interactive HUD Code Assistant Demo (`HudDemo.tsx`)
+### 1. 🖥️ Interactive HUD Code Assistant Demo (`HudDemo.tsx`)
 - **Live Scenario Runner**: Switch between multiple interview situations (*Optimal Two Pointers*, *Fast-Track Refactor*, *Complexity Analysis*) with real-time code typing simulation.
 - **3D Parallax Tilt**: Real-time 3D spring transformation responding to mouse movement with fluid physics damping (`useSpring`, `useTransform`).
 - **Hotkey Controls**: Press <kbd>Esc</kbd> or <kbd>Cmd</kbd> + <kbd>H</kbd> / <kbd>Ctrl</kbd> + <kbd>H</kbd> to toggle the HUD communication box on and off.
 
-### 2. ??? Undetectability Comparison Matrix (`Undetectability.tsx`)
+### 2. 🛡️ Undetectability Comparison Matrix (`Undetectability.tsx`)
 - Detailed breakdown comparing traditional AI tools vs. Vesper across screen-share isolation, process invisibility, zero-audio footprint, and virtual audio loopback drivers.
 
-### 3. ?? Performance & Accuracy Benchmarks (`Benchmarks.tsx`)
+### 3. 📊 Performance & Accuracy Benchmarks (`Benchmarks.tsx`)
 - Technical telemetry and empirical pass-rate metrics against standard LeetCode Hard, Codeforces, and HackerRank question sets.
 
-### 4. ?? Expandable Accordion FAQ (`Faq.tsx`)
+### 4. ❓ Expandable Accordion FAQ (`Faq.tsx`)
 - Smooth disclosure states addressing security, screen-recorder invisibility, latency metrics, and setup requirements.
 
-### 5. ?? Responsive & Accessible Architecture
+### 5. 📱 Responsive & Accessible Architecture
 - Fully responsive across desktop, tablet, and mobile screens with accessible ARIA semantics and high-contrast color balances.
 
 ---
 
-## ?? Project Structure
+## 📁 Project Structure
 
 ```text
 vesper/
-+-- public/               # Static assets & icons
-+-- src/
-�   +-- components/       # Modular UI components
-�   �   +-- Benchmarks.tsx      # Empirical metrics & pass rates
-�   �   +-- BrandIcons.tsx      # Custom SVG brand assets
-�   �   +-- Faq.tsx             # Collapsible FAQ accordion
-�   �   +-- Features.tsx        # Grid of core product capabilities
-�   �   +-- Footer.tsx          # Site footer & navigation links
-�   �   +-- Hero.tsx            # Hero banner & primary CTA
-�   �   +-- HudDemo.tsx         # Interactive 3D HUD simulator
-�   �   +-- Navbar.tsx          # Navigation bar with action buttons
-�   �   +-- Undetectability.tsx # Stealth & isolation comparison
-�   +-- data/
-�   �   +-- content.ts          # Mock data, scenarios, and benchmarks
-�   +-- App.tsx           # Main application root & scroll observer
-�   +-- main.tsx          # DOM mount entry point
-�   +-- style.css         # Tailwind directives & custom keyframe animations
-+-- .gitignore            # Git exclusion rules (dependencies, builds, agents)
-+-- index.html            # HTML shell with Google Fonts
-+-- package.json          # Project metadata & dependencies
-+-- tailwind.config.js    # Tailwind theme configuration
-+-- tsconfig.json         # TypeScript configuration
-+-- vite.config.js        # Vite configuration
+├── public/               # Static assets & icons
+├── src/
+│   ├── components/       # Modular UI components
+│   │   ├── Benchmarks.tsx      # Empirical metrics & pass rates
+│   │   ├── BrandIcons.tsx      # Custom SVG brand assets
+│   │   ├── Faq.tsx             # Collapsible FAQ accordion
+│   │   ├── Features.tsx        # Grid of core product capabilities
+│   │   ├── Footer.tsx          # Site footer & navigation links
+│   │   ├── Hero.tsx            # Hero banner & primary CTA
+│   │   ├── HudDemo.tsx         # Interactive 3D HUD simulator
+│   │   ├── Navbar.tsx          # Navigation bar with action buttons
+│   │   └── Undetectability.tsx # Stealth & isolation comparison
+│   ├── data/
+│   │   └── content.ts          # Mock data, scenarios, and benchmarks
+│   ├── App.tsx           # Main application root & scroll observer
+│   ├── main.tsx          # DOM mount entry point
+│   └── style.css         # Tailwind directives & custom keyframe animations
+├── .gitignore            # Git exclusion rules (dependencies, builds)
+├── index.html            # HTML shell with Google Fonts
+├── package.json          # Project metadata & dependencies
+├── tailwind.config.js    # Tailwind theme configuration
+├── tsconfig.json         # TypeScript configuration
+└── vite.config.js        # Vite configuration
 ```
 
 ---
 
-## ?? Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -146,7 +146,7 @@ bun run preview
 
 ---
 
-## ?? Deployment
+## 🌐 Deployment
 
 This project is deployed on **Vercel**:
 
@@ -156,7 +156,7 @@ This project is deployed on **Vercel**:
 
 ---
 
-## ????? Author & Connect
+## 👤 Author & Connect
 
 Crafted with dedication by **Mahmud**:
 
@@ -165,6 +165,6 @@ Crafted with dedication by **Mahmud**:
 
 ---
 
-## ?? Disclaimer & License
+## 📜 Disclaimer & License
 
 This project is created strictly for **educational, portfolio, and frontend practice purposes**. Design inspiration is credited to [Cluely](https://cluely.com). All trademarks and brand names belong to their respective owners.
