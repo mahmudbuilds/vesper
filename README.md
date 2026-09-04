@@ -1,6 +1,6 @@
 ﻿# ⚡ Vesper — Undetectable AI Copilot Landing Page
 
-[![Live Demo](https://img.shields.io/badge/Demo-vesper--one--brown.vercel.app-2B73EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vesper-one-brown.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-vesper--one--brown.vercel.app-2B73EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vesper--app.vercel.app)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
