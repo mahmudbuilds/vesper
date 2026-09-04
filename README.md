@@ -1,6 +1,6 @@
-﻿# ⚡ Vesper — Undetectable AI Copilot Landing Page
+# ⚡ Vesper — Undetectable AI Copilot Landing Page
 
-[![Live Demo](https://img.shields.io/badge/Demo-vesper--one--brown.vercel.app-2B73EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vesper--app.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-vesper----ai.vercel.app-2B73EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vesper--ai.vercel.app)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -10,7 +10,7 @@
 
 > A modern, high-craft landing page for **Vesper**, an undetectable AI copilot concept engineered for live technical interviews, algorithm optimization, and system design challenges.
 
-🔗 **Live Demo:** [vesper--app.vercel.app](https://vesper--app.vercel.app)
+🔗 **Live Demo:** [vesper--ai.vercel.app](https://vesper--ai.vercel.app)
 
 ---
 
@@ -98,73 +98,3 @@ vesper/
 ├── tailwind.config.js    # Tailwind theme configuration
 ├── tsconfig.json         # TypeScript configuration
 └── vite.config.js        # Vite configuration
-```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-You will need **[Bun](https://bun.sh/)** installed on your machine.
-
-> [!NOTE]
-> This project uses **Bun** as its package manager and runtime.
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/mahmudbuilds/vesper.git
-cd vesper
-```
-
-### 2. Install Dependencies
-
-```bash
-bun install
-```
-
-### 3. Start Development Server
-
-```bash
-bun run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
-
-### 4. Build for Production
-
-```bash
-bun run build
-```
-
-To preview the production build locally:
-
-```bash
-bun run preview
-```
-
----
-
-## 🌐 Deployment
-
-This project is deployed on **Vercel**:
-
-- **Production URL**: [https://vesper-one-brown.vercel.app](https://vesper-one-brown.vercel.app)
-- Build Command: `bun run build`
-- Output Directory: `dist`
-
----
-
-## 👤 Author & Connect
-
-Crafted with dedication by **Mahmud**:
-
-- **GitHub**: [@mahmudbuilds](https://github.com/mahmudbuilds)
-- **X (Twitter)**: [@mahmudbuilds](https://x.com/mahmudbuilds)
-
----
-
-## 📜 Disclaimer & License
-
-This project is created strictly for **educational, portfolio, and frontend practice purposes**. Design inspiration is credited to [Cluely](https://cluely.com). All trademarks and brand names belong to their respective owners.
