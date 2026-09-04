@@ -1,6 +1,6 @@
 ﻿# ⚡ Vesper — Undetectable AI Copilot Landing Page
 
-[![Live Demo](https://img.shields.io/badge/Demo-vesper---app.vercel.app-2B73EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vesper--app.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-vesper--one--brown.vercel.app-2B73EB?style=for-the-badge&logo=vercel&logoColor=white)](https://vesper--app.vercel.app)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -10,7 +10,7 @@
 
 > A modern, high-craft landing page for **Vesper**, an undetectable AI copilot concept engineered for live technical interviews, algorithm optimization, and system design challenges.
 
-🔗 **Live Demo:** [vesper-one-brown.vercel.app](https://vesper-one-brown.vercel.app)
+🔗 **Live Demo:** [vesper--app.vercel.app](https://vesper--app.vercel.app)
 
 ---
 
